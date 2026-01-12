@@ -151,8 +151,3 @@ Dengan mengikuti tutorial ini, Anda dapat menginstall dan mengkonfigurasi **MinI
 
 ------
 
-**Tags:**
-`MinIO` · `Object Storage` · `Ubuntu` · `S3` · `Cloud`
-
-------
-
