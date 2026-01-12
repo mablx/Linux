@@ -1,1 +1,1 @@
-[Tutorial Lengkap: Install dan Konfigurasi MinIO Community Edition di Ubuntu](https://github.com/mablx/Linux/blob/main/Tutorial%20Lengkap%3A%20Install%20dan%20Konfigurasi%20MinIO%20Community%20Edition%20di%20Ubuntu)
+[Tutorial Lengkap: Install dan Konfigurasi MinIO Community Edition di Ubuntu](https://github.com/mablx/Linux/blob/main/Tutorial%20Lengkap%3A%20Install%20dan%20Konfigurasi%20MinIO%20Community%20Edition%20di%20Ubuntu.md)
