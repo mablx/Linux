@@ -284,8 +284,8 @@ wsrep_provider=/usr/lib/galera/libgalera_smm.so
 wsrep_cluster_name="ClusterDB"
 wsrep_cluster_address="gcomm://172.20.0.215,172.20.0.216,172.20.0.217"
 
-wsrep_node_name="Cluster-1"
-wsrep_node_address="172.20.0.215"
+wsrep_node_name="Cluster-1"         #Ubah Sesuai Node/hostname
+wsrep_node_address="172.20.0.215"   #Ubah IP Address nya sesuai dengan Node
 
 wsrep_sst_method=rsync
 binlog_format=row
@@ -296,7 +296,11 @@ innodb_autoinc_lock_mode=2
 wsrep_provider_options="socket.ssl_key=/etc/mysql/ssl/server.key;socket.ssl_cert=/etc/mysql/ssl/server.pem;socket.ssl_ca=/etc/mysql/ssl/ca.pem"
 ```
 
-Sesuaikan **node name** dan **IP** di setiap server.
+Sesuaikan **wsrep_node_name="Nama Node"** dan **wsrep_node_address="IP Address"** di setiap server/node.
+
+Untuk **wsrep_cluster_name="Nama Databases"** isi saja sesuai kebutuhan dan di setiap server/node wajib sama 
+
+Di **wsrep_cluster_address="gcomm://172.20.0.215,172.20.0.216,172.20.0.217"** harus di isi Semua IP Address dari server/node yang ingin di **Cluster**.
 
 ------
 
@@ -423,3 +427,4 @@ Dengan konfigurasi ini:
 - Cocok untuk environment **production**
 
 ------
+
