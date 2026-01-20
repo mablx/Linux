@@ -96,11 +96,11 @@ scp *.pem root@172.20.0.217:/etc/ssl/mysql
 
 Salin file SSL ke semua node dengan path yang sama.
 
-### 6️⃣Node Pertama (Node 1) Wajib Perbaiki Permission: 
+## FIX 1: Node Pertama (Node 1) Wajib Perbaiki Permission: 
 
 biar tidak error/ada masalah **Galera tidak bisa membaca / memakai file SSL key**.
 
-#### ✅ SOLUSI (PALING AMAN): Perbaiki Permission:
+### ✅ SOLUSI (PALING AMAN): Perbaiki Permission:
 
 ```bash
 chown mysql:mysql /etc/ssl/mysql/*.pem
@@ -117,7 +117,7 @@ sudo -u mysql cat /etc/ssl/mysql/server-key.pem >/dev/null && echo OK
 
 Kalau `OK` → aman
 
-#### ❌ Jika Key Terenkripsi (Sering Terjadi)
+### ❌ Jika Key Terenkripsi (Sering Terjadi)
 
 Cek:
 
@@ -131,7 +131,7 @@ Kalau muncul:
 Enter pass phrase for server-key.pem:
 ```
 
-#### ➡️ **Galera TIDAK SUPPORT key ber-password**
+### ➡️ **Galera TIDAK SUPPORT key ber-password**
 
 Fix:
 
@@ -147,7 +147,7 @@ Ganti config ke key baru:
 wsrep_provider_options="socket.ssl_key=/etc/ssl/mysql/server-key-nopass.pem"
 ```
 
-#### 🔁 Restart MariaDB
+### 🔁 Restart MariaDB
 
 ```
 systemctl daemon-reload
@@ -160,7 +160,7 @@ Cek:
 systemctl status mariadb
 ```
 
-### 7️⃣Node Kedua dan Node Seterusnya Harus di Perbaiki biar  tidak error seperti Contoh di bawah:
+## FIX 2: Node Kedua dan Node Seterusnya Harus di Perbaiki biar  tidak error seperti Contoh di bawah:
 
 ```
 Bad value '/etc/ssl/mysql/server-cert.pem'
@@ -174,7 +174,7 @@ Walaupun filenya ada, **permission / ownership masih salah**.
 
 ------
 
-#### 🔎 Kenapa ini bisa terjadi?
+### 🔎 Kenapa ini bisa terjadi?
 
 Galera dijalankan oleh:
 
@@ -189,13 +189,13 @@ root:root
 chmod 600
 ```
 
-##### ➡️ **mysql TIDAK bisa baca** → Galera gagal start
+#### ➡️ **mysql TIDAK bisa baca** → Galera gagal start
 
 ------
 
-#### ✅ SOLUSI WAJIB (LAKUKAN DI SEMUA NODE)
+### ✅ SOLUSI WAJIB (LAKUKAN DI SEMUA NODE)
 
-##### 1️⃣ Set ownership & permission yang BENAR
+#### 1️⃣ Set ownership & permission yang BENAR
 
 Jalankan sebagai root:
 
@@ -208,7 +208,7 @@ chmod 644 /etc/ssl/mysql/ca.pem
 
 ------
 
-##### 2️⃣ Verifikasi mysql bisa baca
+#### 2️⃣ Verifikasi mysql bisa baca
 
 ```
 sudo -u mysql cat /etc/ssl/mysql/server-cert.pem >/dev/null && echo OK
@@ -423,4 +423,3 @@ Dengan konfigurasi ini:
 - Cocok untuk environment **production**
 
 ------
-
