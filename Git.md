@@ -286,4 +286,4 @@ git push origin v3.0.1
 ## ⚠️ PENTING (WAJIB BACA)
 
 - ❌ **Jangan hapus tag** jika repo sudah dipakai banyak orang (breaking change)
-- ✔️ Untuk kasus **judul saja**, **EDIT RELEASE di GitHub UI adalah solusi terbaik
+- ✔️ Untuk kasus **judul saja**, **EDIT RELEASE** di GitHub UI adalah solusi terbaik
