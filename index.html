@@ -2,40 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>GitHub Repository Browser</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- System UI font seperti GitHub -->
+  <title>GitHub File Browser + Markdown Preview</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="topbar">
-    <div class="breadcrumb" id="breadcrumb">/</div>
+<header class="topbar">
+  <div class="repo-input">
+    <input id="owner" placeholder="owner" value="octocat" />
+    <input id="repo" placeholder="repo" value="Hello-World" />
+    <input id="branch" placeholder="branch" value="main" />
+    <button id="loadRepo">Load Repo</button>
+  </div>
 
-    <div class="actions">
-      <button id="themeToggle" title="Toggle theme">🌗</button>
-    </div>
-  </header>
+  <div class="actions">
+    <input type="file" id="localPicker" webkitdirectory multiple hidden />
+    <button id="loadLocal">Load Local Folder</button>
+    <button id="themeToggle">🌗</button>
+  </div>
+</header>
 
-  <main class="layout">
-    <!-- LEFT: FILE EXPLORER -->
-    <aside class="sidebar explorer" id="fileExplorer">
-      <div class="loading">Loading repository...</div>
-    </aside>
+<main class="layout">
+  <aside id="fileTree" class="panel"></aside>
+  <section id="viewer" class="panel viewer"></section>
+  <aside id="outline" class="panel outline"></aside>
+</main>
 
-    <!-- CENTER: PREVIEW -->
-    <section class="content">
-      <div id="preview" class="preview empty">
-        Select a file to preview
-      </div>
-    </section>
-
-    <!-- RIGHT: OUTLINE -->
-    <aside class="sidebar outline" id="outline">
-      <!-- diisi otomatis -->
-    </aside>
-  </main>
-
-  <script src="script.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
