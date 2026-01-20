@@ -125,8 +125,3 @@ Dengan menggunakan **cAdvisor**, **Node Exporter**, **Prometheus**, dan **Grafan
 
 ------
 
-**Tags:**
-`Docker` · `Prometheus` · `Grafana` · `Monitoring` · `DevOps`
-
-------
-
