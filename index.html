@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GitHub Repository Browser</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- System UI font seperti GitHub -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="breadcrumb" id="breadcrumb">/</div>
+
+    <div class="actions">
+      <button id="themeToggle" title="Toggle theme">🌗</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <!-- LEFT: FILE EXPLORER -->
+    <aside class="sidebar explorer" id="fileExplorer">
+      <div class="loading">Loading repository...</div>
+    </aside>
+
+    <!-- CENTER: PREVIEW -->
+    <section class="content">
+      <div id="preview" class="preview empty">
+        Select a file to preview
+      </div>
+    </section>
+
+    <!-- RIGHT: OUTLINE -->
+    <aside class="sidebar outline" id="outline">
+      <!-- diisi otomatis -->
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
