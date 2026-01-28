@@ -14,4 +14,4 @@
 
 ➤ [Cara Install WordPress Menggunakan Docker Compose Terbaru dengan FrankenPHP dan Caddy](https://github.com/mablx/Linux/blob/f5120f437292ef880659cc698fa2464b7bb57072/Docker/Cara%20Install%20WordPress%20Menggunakan%20Docker%20Compose%20Terbaru%20dengan%20FrankenPHP%20dan%20Caddy.md)
 
-➤ [Disaster Recovery Cluster (DRC) WordPress dengan MariaDB Galera dan Load Balancer Caddy](https://github.com/mablx/Linux/blob/fe44324e788f2d6b693a62db08a444054d48b583/Docker/Disaster%20Recovery%20Cluster%20(DRC)%20WordPress%20dengan%20MariaDB%20Galera%20dan%20Load%20Balancer%20Caddy.md)
+➤ [Disaster Recovery Cluster (DRC) WordPress dengan MariaDB Galera dan Load Balancer Caddy](https://github.com/mablx/Linux/blob/b021ebe30e47a3eb1461e2518a9a4089c211dd8c/Proxmox/Ubuntu/24.04/Cara%20Mengatsi%20Tidak%20Bisa%20Update%20%26%20Upgrade%20di%20Ubuntu%2024.04%20(Proxmox).md)
